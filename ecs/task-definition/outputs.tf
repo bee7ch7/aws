@@ -6,16 +6,12 @@ output "aws_ecs_task_definition_log_group" {
   value = aws_cloudwatch_log_group.this[0].name
 }
 
-# output "policies" {
-#   value = module.policies.policy_arn
-# }
-
 output "task_policies" {
-  value = try(module.task_policies[0].list_of_policy_arn, "")
+  value = try(module.task_policies[0].list_of_policy_arns, [])
 }
 
 output "task_execution_policies" {
-  value = try(module.task_execution_policies[0].list_of_policy_arn, "")
+  value = try(module.task_execution_policies[0].list_of_policy_arns, [])
 }
 
 output "task_execution_iam_role_arn" {
