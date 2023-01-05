@@ -16,6 +16,7 @@ jobs:
       with:
         working-dir: .
         recursive: true
+        recursive-path: modules
         output-format: markdown table
         output-file: USAGE.md
         output-method: inject
