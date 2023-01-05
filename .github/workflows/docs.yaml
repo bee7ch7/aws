@@ -14,7 +14,7 @@ jobs:
     - name: Render terraform docs and push changes back to PR
       uses: terraform-docs/gh-actions@v1.0.0
       with:
-        working-dir: iam
+        working-dir: .
         recursive: true
         output-format: markdown table
         output-file: USAGE.md
