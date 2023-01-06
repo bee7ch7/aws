@@ -1,8 +1,14 @@
 {
   "branches": [
     "main",
-    "stage",
-    "dev"
+    {
+      "name": "dev",
+      "prerelease": true
+    },
+    {
+      "name": "stage",
+      "prerelease": true
+    }
   ],
   "plugins": [
     [
