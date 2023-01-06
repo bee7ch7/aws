@@ -31,7 +31,7 @@
 # variable "tags" { ##############
 #   description = "A map of tags to add to all resources." ####### dev 777
 #   type        = map(string) ############## dev 777
-#   default     = {} ############ dev 777y
+#   default     = {} ############ dev 777y feature-frest
 # }
 
 variable "policies" {
