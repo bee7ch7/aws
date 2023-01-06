@@ -3,12 +3,12 @@
     "main",
     {
       "name": "dev",
-      "channel": "channel-${name}",
+      "channel": "channel-develop",
       "prerelease": true
     },
     {
       "name": "stage",
-      "channel": "channel-${name}",
+      "channel": "channel-staging",
       "prerelease": true
     }
   ],
