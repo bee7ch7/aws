@@ -29,9 +29,9 @@
 # }
 
 # variable "tags" { ##############
-#   description = "A map of tags to add to all resources." ####### dev 777
-#   type        = map(string) ############## dev 777
-#   default     = {} ############ dev 777y feature-frest
+#   description = "A map of tags to add to all resources." ####### dev 34534
+#   type        = map(string) ############## dev 34543
+#   default     = {} ############ dev 542534 feature-frest
 # }
 
 variable "policies" {
