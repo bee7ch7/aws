@@ -5,8 +5,10 @@ on:
   push:
     branches:
       - main
+      - stage
+      - dev
     paths:
-      - '**/*.tf'
+      - "**/*.tf"
 jobs:
   release:
     name: Release
