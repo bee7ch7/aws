@@ -58,60 +58,60 @@ variable "tags" {
   default = {}
 }
 
-#### execution ####
+##### execution #####
 
 variable "task_execution_role_name" {
-  type = string
+  type    = string
   default = ""
 }
 variable "task_execution_role_requires_mfa" {
-  type = bool
+  type    = bool
   default = false
 }
 variable "task_execution_create_role" {
-  type = bool
+  type    = bool
   default = false
 }
 variable "task_execution_trusted_role_services" {
-  type = list(any)
+  type    = list(any)
   default = []
 }
 
 variable "task_execution_custom_role_policy_arns" {
-  type = list(any)
+  type    = list(any)
   default = []
 }
 
 variable "task_execution_policies_create" {
-  type = bool
+  type    = bool
   default = false
 }
 
 variable "task_execution_policies" {
-  type = map(any)
+  type    = map(any)
   default = {}
 }
 
 #### task ####
 variable "task_role_name" {
-  type = string
+  type    = string
   default = ""
 }
 variable "task_role_requires_mfa" {
-  type = bool
+  type    = bool
   default = false
 }
 variable "task_create_role" {
-  type = bool
+  type    = bool
   default = false
 }
 variable "task_trusted_role_services" {
-  type = list(any)
+  type    = list(any)
   default = []
 }
 
 variable "task_custom_role_policy_arns" {
-  type = list(any)
+  type    = list(any)
   default = []
 }
 
