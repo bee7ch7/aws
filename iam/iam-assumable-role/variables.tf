@@ -94,7 +94,7 @@ variable "number_of_custom_role_policy_arns" {
   default     = null
 }
 
-# Pre-defined policies
+# Pre-defined policies #
 variable "admin_role_policy_arn" {
   description = "Policy ARN to use for admin role"
   type        = string
