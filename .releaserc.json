@@ -3,10 +3,12 @@
     "main",
     {
       "name": "dev",
+      "channel": "channel-${name}",
       "prerelease": true
     },
     {
       "name": "stage",
+      "channel": "channel-${name}",
       "prerelease": true
     }
   ],
