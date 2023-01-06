@@ -28,10 +28,10 @@
 #   default     = ""
 # }
 
-# variable "tags" { ##############45454
-#   description = "A map of tags to add to all resources." ####### dev 34534werewr
-#   type        = map(string) ############## dev 34543
-#   default     = {} ############ dev 542534 feature-frest 545 4rwrw
+# variable "tags" {
+#   description = "A map of tags to add to all resources."
+#   type        = map(string)
+#   default     = {} 
 # }
 
 variable "policies" {
