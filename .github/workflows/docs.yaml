@@ -16,6 +16,7 @@ jobs:
         with:
           working-dir: modules
           recursive: true
+          recursive-path: iam
           output-file: USAGE.md
           output-method: inject
           git-push: true
