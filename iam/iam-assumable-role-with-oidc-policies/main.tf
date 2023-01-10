@@ -10,6 +10,9 @@ module "iam_role_oidc" {
   role_name        = var.role_name
   role_policy_arns = local.role_policy_arns
 
+  provider_url                  = var.provider_url
+  oidc_fully_qualified_subjects = var.oidc_fully_qualified_subjects
+
   depends_on = [
     module.policies
   ]
