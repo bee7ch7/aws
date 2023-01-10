@@ -7,8 +7,8 @@ on:
       - main
       - stage
       - dev
-    paths:
-      - "**/*.tf"
+    # paths:
+    #   - "**/*.tf"
 jobs:
   release:
     name: Release
