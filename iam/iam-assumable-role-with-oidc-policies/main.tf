@@ -4,7 +4,7 @@ locals {
 
 module "iam_role_oidc" {
   count  = var.create_role ? 1 : 0
-  source = "github.com/terraform-aws-modules/terraform-aws-iam//modules/iam-assumable-role-with-oidc"
+  source = "github.com/bee7ch7/aws/iam/iam-assumable-role-with-oidc"
 
   create_role      = var.create_role
   role_name        = var.role_name
