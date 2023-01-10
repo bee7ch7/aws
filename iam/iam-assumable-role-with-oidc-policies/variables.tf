@@ -10,12 +10,6 @@ variable "provider_url" {
   default     = ""
 }
 
-variable "provider_urls" {
-  description = "List of URLs of the OIDC Providers"
-  type        = list(string)
-  default     = []
-}
-
 variable "tags" {
   description = "A map of tags to add to IAM role resources"
   type        = map(string)
@@ -26,6 +20,14 @@ variable "role_name" {
   description = "IAM role name"
   type        = string
   default     = null
+}
+
+
+
+variable "role_policy_arns" {
+  description = "List of ARNs of IAM policies to attach to IAM role"
+  type        = list(string)
+  default     = []
 }
 
 variable "oidc_fully_qualified_subjects" {
