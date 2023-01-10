@@ -105,3 +105,13 @@ variable "allow_self_assume_role" {
   type        = bool
   default     = false
 }
+
+variable "create_policies" {
+  type    = bool
+  default = false
+}
+variable "policies" {
+  type    = map(any)
+  default = {}
+}
+
