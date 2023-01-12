@@ -23,26 +23,30 @@
           },
           {
             "type": "bug",
-            "release": "minor"
+            "release": "patch"
           },
           {
             "type": "fix",
-            "release": "minor"
+            "release": "patch"
           },
           {
             "type": "refactor",
-            "release": "minor"
+            "release": "patch"
           },
           {
             "type": "feature",
-            "release": "major"
+            "release": "minor"
           },
           {
             "type": "FEATURE",
+            "release": "minor"
+          },
+          {
+            "type": "RELEASE",
             "release": "major"
           },
           {
-            "type": "STABLE",
+            "type": "release",
             "release": "major"
           },
           {
