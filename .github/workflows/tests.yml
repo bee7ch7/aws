@@ -1,0 +1,25 @@
+name: Release
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - stage
+      - dev
+    # paths:
+    #   - "**/*.tf"
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name:
+        run: |
+          git describe
+          export APPVERSION=$(git describe)
+          echo $APPVERSION
+      - name: env
+        run: env
