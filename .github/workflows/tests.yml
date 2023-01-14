@@ -24,4 +24,5 @@ jobs:
           export APPVERSION=$(git describe --tags)
           echo $APPVERSION
       - name: env
-        run: env
+        run: |
+          echo ${{ vars.DEPLOY_ENVIRONMENT }} - ${{ REGION }}
