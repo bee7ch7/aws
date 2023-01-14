@@ -20,7 +20,7 @@ jobs:
           fetch-depth: 0
       - name: get latest git tag
         run: |
-          git describe --tags
+          git describe
           export APPVERSION=$(git describe --tags)
           echo $APPVERSION
       - name: env
