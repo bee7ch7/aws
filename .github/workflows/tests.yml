@@ -25,4 +25,4 @@ jobs:
           echo $APPVERSION
       - name: env
         run: |
-          echo ${{ vars.DEPLOY_ENVIRONMENT }} - ${{ REGION }}
+          echo ${{ vars.DEPLOY_ENVIRONMENT }} - ${{ vars.REGION }}
