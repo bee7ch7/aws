@@ -1,4 +1,4 @@
-name: Release
+name: Get git tag
 
 on:
   workflow_dispatch:
@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - name:
+      - name: get latest git tag
         run: |
           git describe --tags
           export APPVERSION=$(git describe --tags)
