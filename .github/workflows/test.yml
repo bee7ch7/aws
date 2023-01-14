@@ -1,0 +1,27 @@
+name: Get git tag
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - stage
+      - dev
+    # paths:
+    #   - "**/*.tf"
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: get latest git tag
+        run: |
+          git describe --tags
+          export APPVERSION=$(git describe --tags)
+          echo $APPVERSION
+      - name: env
+        run: env
