@@ -20,8 +20,22 @@ jobs:
           fetch-depth: 0 
       - name: get latest git tag
         run: |
+          echo IMAGE_TAG=$(git describe --tags) >> $GITHUB_ENV
+          echo ANOTHER_VALUE=myanothervalue123 >> $GITHUB_ENV
           git describe --tags
           export APPVERSION=$(git describe --tags)
           echo $APPVERSION
       - name: env
         run: env
+  deploy:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 
+      - run: |
+          echo simple_echo
+          echo ${{ env.IMAGE_TAG }}
+          echo ${{ env.ANOTHER_VALUE }}
