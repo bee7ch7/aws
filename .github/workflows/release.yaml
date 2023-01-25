@@ -32,5 +32,10 @@ jobs:
             conventional-changelog-conventionalcommits@4.6.3
         env:
           GITHUB_TOKEN: ${{ secrets.SEMANTIC_RELEASE_TOKEN }}
+
+      - name: Set output
+        id: new_release
+        if: steps.release.outputs.new_release_published == 'true'
+        run: echo "new_release=${{ steps.release.outputs.new_release_published }}" >> $GITHUB_OUTPUT
     outputs:
-      new_release: ${{ steps.release.outputs.new_release_published }}
+      new_release: ${{ steps.new_release.outputs.new_release }}
