@@ -3,13 +3,13 @@ name: Release
 on:
   workflow_dispatch:
   workflow_call:
-  push:
-    branches:
-      - main
-      - stage
-      - dev
-    # paths:
-    #   - "**/*.tf"
+  # push:
+  #   branches:
+  #     - main
+  #     - stage
+  #     - dev
+  # paths:
+  #   - "**/*.tf"
 jobs:
   release:
     name: Release
