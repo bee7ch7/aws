@@ -38,14 +38,6 @@
             "release": "minor"
           },
           {
-            "type": "FEATURE",
-            "release": "minor"
-          },
-          {
-            "type": "RELEASE",
-            "release": "major"
-          },
-          {
             "type": "release",
             "release": "major"
           },
