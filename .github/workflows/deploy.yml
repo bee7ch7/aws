@@ -13,11 +13,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     needs: [release]
-    if: needs.release.outputs.new_release == 'true'
+    # if: needs.release.outputs.new_release == 'true'
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
+        run: echo ${{ needs.release.outputs }}
       - name: Deploy step
         run: echo deploy cmd
