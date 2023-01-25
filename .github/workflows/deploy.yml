@@ -15,7 +15,10 @@ jobs:
     needs: [release]
     # if: needs.release.outputs.new_release == 'true'
     steps:
-      - name: Checkout
-        run: echo ${{ needs.release.outputs }}
+      - name: Get outputs
+        run: |
+          echo ${{ needs.release.outputs }}
+          echo ${{ toJSON(needs.release.outputs) }}
+          echo ${{ needs.release.outputs.new_release }}
       - name: Deploy step
         run: echo deploy cmd
