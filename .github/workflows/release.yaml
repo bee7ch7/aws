@@ -5,7 +5,7 @@ on:
   workflow_call:
     outputs:
       new_release:
-        description: "If new release is published"
+        description: "New release is published ? True/False"
         value: ${{ jobs.release.outputs.new_release }}
   # push:
   #   branches:
