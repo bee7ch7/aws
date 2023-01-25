@@ -3,6 +3,10 @@ name: Release
 on:
   workflow_dispatch:
   workflow_call:
+    outputs:
+      new_release:
+        description: "If new release is published"
+        value: ${{ jobs.new_release.outputs.new_release }}
   # push:
   #   branches:
   #     - main
