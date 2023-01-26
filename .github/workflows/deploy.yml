@@ -29,5 +29,7 @@ jobs:
       - name: verify step
         run: |
           echo from job: ${{ needs.release.outputs.new_release_version }}
+          echo from job: needs.release.outputs.new_release_version
           echo from var: $IMAGE_TAG
           echo from env: ${{ env.IMAGE_TAG }}
+          echo $(git describe --tags)
