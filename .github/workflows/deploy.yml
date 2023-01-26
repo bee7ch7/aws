@@ -22,4 +22,12 @@ jobs:
     needs: [build]
     steps:
       - name: Deploy step
-        run: echo deploy cmd
+        run: |
+          echo deploy ${{ needs.release.outputs.new_release_version }}
+          echo IMAGE_TAG=${{ needs.release.outputs.new_release_version }} >> $GITHUB_ENV 
+          
+      - name: verify step
+        run: |
+          echo from job: ${{ needs.release.outputs.new_release_version }}
+          echo from var: $IMAGE_TAG
+          echo from env: ${{ env.IMAGE_TAG }}
