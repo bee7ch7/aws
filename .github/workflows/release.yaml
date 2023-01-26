@@ -7,6 +7,10 @@ on:
       new_release:
         description: "New release is published ? True/False"
         value: ${{ jobs.release.outputs.new_release }}
+      new_release_version:
+        description: "New release version"
+        value: ${{ jobs.release.outputs.new_release_version }}
+      
   # push:
   #   branches:
   #     - main
@@ -38,3 +42,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.SEMANTIC_RELEASE_TOKEN }}
     outputs:
       new_release: ${{ steps.release.outputs.new_release_published }}
+      new_release_version: ${{ steps.release.outputs.new_release_version }}
