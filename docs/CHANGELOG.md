@@ -1,3 +1,10 @@
+## [1.0.22](https://github.com/bee7ch7/aws/compare/v1.0.21...v1.0.22) (2023-02-22)
+
+
+### Bug Fixes
+
+* new version ([ce80875](https://github.com/bee7ch7/aws/commit/ce80875fde3a950a11d425bf335b5025cdd6b8d9))
+
 ## [1.0.21](https://github.com/bee7ch7/aws/compare/v1.0.20...v1.0.21) (2023-02-06)
 
 
